@@ -119,8 +119,14 @@ button:focus-visible { outline: 4px solid var(--blue); outline-offset: 4px; }
 
 footer { border-top: 2px solid var(--ink); padding: 1rem 0 2rem; }
 
+footer-text {
+  color: #888;
+  font-size: 14px;
+}
+
 @media (max-width: 850px) {
-  .site-header, .film-grid { grid-template-columns: 1fr; }
+  .site-header,
+  .film-grid { grid-template-columns: 1fr; }
   .programme-summary { justify-self: start; }
 }
 
@@ -128,3 +134,29 @@ footer { border-top: 2px solid var(--ink); padding: 1rem 0 2rem; }
   .film-card { grid-template-columns: 1fr; }
   .film-art { border-right: 0; border-bottom: 2px solid var(--ink); }
 }
+
+#scrollTopBtn {
+  display: block;
+  position: fixed !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  bottom: 40px !important;
+  z-index: 9999;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #333;
+  transform: translateX(-50%) scale(1.1) !important;
+}
+
